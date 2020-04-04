@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Coronablock",
+  "version": "1.0",
+  "description": "Hides web-content concerning coronavirus.",
+  "homepage_url": "https://github.com/..TODO",
+  "icons": {
+    "64": "icons/coronablock-64.png"
+  },
+  "permissions": [
+	"*://*/*",
+    "activeTab",
+	"tabs"
+  ],
+  "background": {
+    "scripts": [
+        "jquery-3.4.1.min.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "icons/coronablock-64.png",
+    "default_title": "Coronablock",
+    "default_popup": "toggle.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+		"*://*/*"
+      ],
+      "js": [
+        "coronablock.js",	
+        "jquery-3.4.1.min.js"
+      ]
+    }
+  ]
+}
