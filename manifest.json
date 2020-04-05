@@ -1,25 +1,25 @@
 {
   "manifest_version": 2,
-  "name": "Coronablock",
+  "name": "Novid",
   "version": "1.0",
   "description": "Hides web-content concerning coronavirus.",
-  "homepage_url": "https://github.com/..TODO",
+  "homepage_url": "https://github.com/christoshadjiaslanis/novid-19",
   "icons": {
-    "64": "icons/coronablock-64.png"
+    "64": "icons/novid-64.png"
   },
   "permissions": [
 	"*://*/*",
-    "activeTab",
-	"tabs"
+    "activeTab"
   ],
   "background": {
     "scripts": [
-        "jquery-3.4.1.min.js"
+		"backrgound.js",
+		"novid.js"
     ]
   },
   "browser_action": {
-    "default_icon": "icons/coronablock-64.png",
-    "default_title": "Coronablock",
+    "default_icon": "icons/novid-64.png",
+    "default_title": "Novid-19",
     "default_popup": "toggle.html"
   },
   "content_scripts": [
@@ -28,8 +28,7 @@
 		"*://*/*"
       ],
       "js": [
-        "coronablock.js",	
-        "jquery-3.4.1.min.js"
+        "novid.js"	
       ]
     }
   ]
